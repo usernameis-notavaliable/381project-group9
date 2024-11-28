@@ -2,7 +2,7 @@
 
 # Replace these values
 API_URL="https://three81project-group9.onrender.com/api"
-SESSION="connect.sid=YOUR_SESSION_COOKIE"
+SESSION="connect.sid=s%3AheyjxsoALxl2iNxYgedf2pT6vS4UjPUi.4uXxmYUftvWUur04bpw0P1W%2Fk6j%2Bte9U06%2FHJXL4oBY"
 
 # Colors for output
 GREEN='\033[0;32m'
