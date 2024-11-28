@@ -6,6 +6,10 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
+  username: {
+    type: String,
+    required: true
+  },
   displayName: {
     type: String,
     required: true
@@ -25,8 +29,7 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  },
-  username: String
+  }
 });
 
 module.exports = mongoose.model('User', UserSchema);
