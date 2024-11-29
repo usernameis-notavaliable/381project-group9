@@ -72,8 +72,8 @@ h1,h2,h3,h4,h5,h6 {
 @media (min-width: 1200px) {
   .home {
     background: 
-      url('../img/idea.svg') left center no-repeat,
-      url('../img/human.svg') right center no-repeat,
+      url('../img/idea.svg') left 90% no-repeat,
+      url('../img/human.svg') right 75% no-repeat,
       url('../img/noise-bg.svg') left top repeat,
       var(--background-color);
     background-size: 500px;
