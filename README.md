@@ -232,8 +232,8 @@ fetch(`/api/notes/${noteId}`, {
     credentials: 'include'
 }).then(r => r.json()).then(console.log);
 
-## localStorage version
 
+## localStorage version
 // GET the note
 fetch(`/api/notes/${localStorage.getItem('noteId')}`, {
     credentials: 'include'
@@ -261,6 +261,7 @@ console.log('Stored note ID:', localStorage.getItem('noteId'));
 
 // Remove it when you're done
 localStorage.removeItem('noteId');
+
 
 
 
