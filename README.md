@@ -105,13 +105,13 @@ In views/(folder)/(files)
 config
 db.js
 controllers
-dashboardController,js, mainController.js
+dashboardController,js, mainController.js, apiController.js
 middleware
 checkAuth.js
 models
 Notes.js, User.js
 routes
-auth.js, dashboard.js, index.js
+auth.js, dashboard.js, index.js, api.js
 
 
 ## README.md: this file
@@ -125,7 +125,7 @@ GOOGLE_CALLBACK_URL=
 
 
 # The cloud-based server URL:
-
+https://three81project-group9.onrender.com
 
 
 # Operation guides:
@@ -188,6 +188,79 @@ http://localhost:5000/api/notes/search \
 -d '{
     "searchTerm": "test"
 }'
+
+## Using DEV tools to test API function in Cloud platform-render.com
+
+After you have login the website, the DEV tool will appear when you press the F12.
+In console, you can use the code below to test the API functions.
+
+### To create a note
+fetch('/api/notes', {
+    method: 'POST',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        title: 'Test Note',
+        body: 'Testing'
+    })
+}).then(r => r.json()).then(console.log)
+
+## Store your ID in a variable for easy use
+const noteId = 'COPY_YOUR_ID_HERE';
+## Or Save ID to localStorage
+localStorage.setItem('noteId', 'COPY_YOUR_ID_HERE'); // they will work even after refresh
+
+### GET this specific note
+fetch(`/api/notes/${noteId}`, {
+    credentials: 'include'
+}).then(r => r.json()).then(console.log);
+
+### UPDATE this note
+fetch(`/api/notes/${noteId}`, {
+    method: 'PUT',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        title: 'Updated Note Title',
+        body: 'This is the updated content'
+    })
+}).then(r => r.json()).then(console.log);
+
+###　DELETE this note
+fetch(`/api/notes/${noteId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+}).then(r => r.json()).then(console.log);
+
+## localStorage version
+
+// GET the note
+fetch(`/api/notes/${localStorage.getItem('noteId')}`, {
+    credentials: 'include'
+}).then(r => r.json()).then(console.log);
+
+// UPDATE the note
+fetch(`/api/notes/${localStorage.getItem('noteId')}`, {
+    method: 'PUT',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        title: 'Updated Again',
+        body: 'Testing with localStorage'
+    })
+}).then(r => r.json()).then(console.log);
+
+// DELETE the note
+fetch(`/api/notes/${localStorage.getItem('noteId')}`, {
+    method: 'DELETE',
+    credentials: 'include'
+}).then(r => r.json()).then(console.log);
+
+// To check the stored noteid anytime
+console.log('Stored note ID:', localStorage.getItem('noteId'));
+
+// Remove it when you're done
+localStorage.removeItem('noteId');
 
 
 
