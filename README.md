@@ -1,4 +1,4 @@
-#　Project Info
+# Project Info
 Your Inspiration is a web-based personal thought journal that allows users to capture and organize their ideas seamlessly. Users can authenticate securely through their Google accounts, providing a hassle-free login experience. The platform offers comprehensive note management functionality, including:
 Creating new thought entries
 Reading and reviewing past entries
@@ -17,7 +17,7 @@ Tam Oi Laam (S12887457)
 
 
 
-#　Project Info intro
+# Project Info intro
 ## app.js:
 
 1. Authentication & Session Management:
@@ -233,7 +233,7 @@ fetch(`/api/notes/${noteId}`, {
 }).then(r => r.json()).then(console.log);
 
 
-## localStorage version
+## LocalStorage version
 // GET the note
 fetch(`/api/notes/${localStorage.getItem('noteId')}`, {
     credentials: 'include'
