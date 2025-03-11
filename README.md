@@ -18,7 +18,7 @@ Your Inspiration is a web-based personal thought journal designed to help users 
 - Node.js installed
   > ### 1. Clone the repository:
     ```
-     git clone ...
+     git clone https://github.com/usernameis-notavaliable/381project-group9/tree/main
     ```
   > ### 2. Install dependencies:
     ```
