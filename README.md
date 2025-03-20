@@ -12,6 +12,11 @@ Your Inspiration is a web-based personal thought journal designed to help users 
    - Read and review past entries
    - Update existing content
    - Delete unwanted entries
+ 
+## The cloud-based server URL
+```
+https://three81project-group9.onrender.com/
+```
 
 # Getting Started
 ## _Prerequisites_
